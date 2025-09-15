@@ -1,0 +1,96 @@
+il n'y <!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tableau de bord - Gestion des tâches</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="header.css">
+  <link rel="stylesheet" href="modals.css">
+  <script src="script.js" defer></script>
+  <script src="header.js" defer></script>
+  <script src="index.js" defer></script>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-container">
+      <a href="index.html" class="header-logo">
+        📋 TaskManager
+      </a>
+      
+      <nav class="header-nav">
+        <a href="index.html" class="active">Accueil</a>
+        <a href="taches.html">Tâches</a>
+        <a href="projets.html">Projets</a>
+        <a href="utilisateurs.html">Utilisateurs</a>
+      </nav>
+      
+      <div class="header-user">
+        <div class="header-notifications">
+          🔔
+          <span class="notification-badge">3</span>
+        </div>
+        <div class="header-profile">
+          <img src="https://i.pravatar.cc/40" alt="Avatar">
+          <div class="header-profile-info">
+            <span class="header-profile-name">Admin</span>
+            <span class="header-profile-role">Administrateur</span>
+          </div>
+        </div>
+        <button class="header-mobile-toggle">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTENU PRINCIPAL -->
+  <main>
+    <!-- STATS -->
+    <section class="stats">
+      <div class="card todo">
+        <h3>À faire</h3>
+        <p id="count-todo">0 tâches</p>
+      </div>
+      <div class="card inprogress">
+        <h3>En cours</h3>
+        <p id="count-progress">0 tâches</p>
+      </div>
+      <div class="card done">
+        <h3>Terminées</h3>
+        <p id="count-done">0 tâches</p>
+      </div>
+    </section>
+
+    <!-- TÂCHES RÉCENTES + À VENIR -->
+    <section class="tasks">
+      <div class="recent">
+        <h2>📋 Tâches récentes</h2>
+        <ul id="recent-tasks">
+          <li>Chargement...</li>
+        </ul>
+      </div>
+      <div class="upcoming">
+        <h2>📅 À venir</h2>
+        <ul id="upcoming-tasks">
+          <li>Chargement...</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PROJETS -->
+    <section class="projects">
+      <h2>📁 Mes projets</h2>
+      <div class="project-grid" id="project-grid">
+        <div class="project create">
+          <button onclick="window.location.href='projets.html'">+ Créer un projet</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- BOUTON FLOTTANT -->
+  <button class="add-task" onclick="window.location.href='taches.html'">+ Nouvelle tâche</button>
+
+</body>
+</html>

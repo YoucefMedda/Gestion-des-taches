@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projets - Gestion des Tâches</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="projets.css">
+  <link rel="stylesheet" href="header.css">
+  <link rel="stylesheet" href="modals.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-container">
+      <a href="index.html" class="header-logo">
+        📋 TaskManager
+      </a>
+      
+      <nav class="header-nav">
+        <a href="index.html">Accueil</a>
+        <a href="taches.html">Tâches</a>
+        <a href="projets.html" class="active">Projets</a>
+        <a href="utilisateurs.html">Utilisateurs</a>
+      </nav>
+      
+      <div class="header-user">
+        <div class="header-notifications">
+          🔔
+          <span class="notification-badge">3</span>
+        </div>
+        <div class="header-profile">
+          <img src="https://i.pravatar.cc/40" alt="Avatar">
+          <div class="header-profile-info">
+            <span class="header-profile-name">Admin</span>
+            <span class="header-profile-role">Administrateur</span>
+          </div>
+        </div>
+        <button class="header-mobile-toggle">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Contenu principal -->
+  <main class="container">
+    <!-- En-tête de page -->
+    <div class="page-header">
+      <h2>Mes Projets</h2>
+      <button id="btnNouveauProjet" class="btn-principal">+ Nouveau Projet</button>
+    </div>
+
+    <!-- Grille de projets -->
+    <div id="listeProjets" class="grid-projets">
+
+      <div class="carte-projet">
+        <div class="carte-top">
+          <h3>Projet Alpha</h3>
+          <span class="taches-count">15 tâches</span>
+        </div>
+        <p>Application web de gestion de clients.</p>
+        <div class="progress">
+          <div class="progress-text">
+            <span>Progression</span>
+            <span>75%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill green" style="width:75%"></div>
+          </div>
+        </div>
+        <div class="carte-actions">
+          <button class="voir">Voir détails</button>
+          <button class="supprimer">Supprimer</button>
+        </div>
+      </div>
+
+      <div class="carte-projet">
+        <div class="carte-top">
+          <h3>Projet Beta</h3>
+          <span class="taches-count">9 tâches</span>
+        </div>
+        <p>Migration du système de facturation.</p>
+        <div class="progress">
+          <div class="progress-text">
+            <span>Progression</span>
+            <span>30%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill jaune" style="width:30%"></div>
+          </div>
+        </div>
+        <div class="carte-actions">
+          <button class="voir">Voir détails</button>
+          <button class="supprimer">Supprimer</button>
+        </div>
+      </div>
+
+      <div class="carte-projet">
+        <div class="carte-top">
+          <h3>Projet Gamma</h3>
+          <span class="taches-count">22 tâches</span>
+        </div>
+        <p>Nouvelle interface de tableau de bord.</p>
+        <div class="progress">
+          <div class="progress-text">
+            <span>Progression</span>
+            <span>100%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill bleu" style="width:100%"></div>
+          </div>
+        </div>
+        <div class="carte-actions">
+          <button class="voir">Voir détails</button>
+          <button class="supprimer">Supprimer</button>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="script.js" defer></script>
+  <script src="header.js" defer></script>
+  <script src="projets.js" defer></script>
+</body>
+</html>

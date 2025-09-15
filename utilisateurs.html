@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Utilisateurs - Gestion des Tâches</title>
+  <link rel="stylesheet" href="taches.css">
+  <link rel="stylesheet" href="header.css">
+  <link rel="stylesheet" href="modals.css">
+  <script src="script.js" defer></script>
+  <script src="header.js" defer></script>
+  <script src="utilisateurs.js" defer></script>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-container">
+      <a href="index.html" class="header-logo">
+        📋 TaskManager
+      </a>
+      
+      <nav class="header-nav">
+        <a href="index.html">Accueil</a>
+        <a href="taches.html">Tâches</a>
+        <a href="projets.html">Projets</a>
+        <a href="utilisateurs.html" class="active">Utilisateurs</a>
+      </nav>
+      
+      <div class="header-user">
+        <div class="header-notifications">
+          🔔
+          <span class="notification-badge">3</span>
+        </div>
+        <div class="header-profile">
+          <img src="https://i.pravatar.cc/40" alt="Avatar">
+          <div class="header-profile-info">
+            <span class="header-profile-name">Admin</span>
+            <span class="header-profile-role">Administrateur</span>
+          </div>
+        </div>
+        <button class="header-mobile-toggle">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTENU PRINCIPAL -->
+  <main>
+    <div class="tasks-header">
+      <h1>👥 Gestion des Utilisateurs</h1>
+      <button class="add-task" id="btnNouvelUtilisateur">+ Nouvel Utilisateur</button>
+    </div>
+
+    <!-- STATISTIQUES -->
+    <section class="stats">
+      <div class="card todo">
+        <h3>Total</h3>
+        <p id="count-total">0 utilisateurs</p>
+      </div>
+      <div class="card inprogress">
+        <h3>Administrateurs</h3>
+        <p id="count-admin">0 admins</p>
+      </div>
+      <div class="card done">
+        <h3>Utilisateurs</h3>
+        <p id="count-users">0 utilisateurs</p>
+      </div>
+    </section>
+
+    <!-- TABLEAU DES UTILISATEURS -->
+    <div class="table-container">
+      <table class="task-table">
+        <thead>
+          <tr>
+            <th>Nom</th>
+            <th>Email</th>
+            <th>Rôle</th>
+            <th>Tâches assignées</th>
+            <th>Projets</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="utilisateurs-table">
+          <tr>
+            <td colspan="6" style="text-align: center; padding: 2rem;">
+              Chargement...
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+</body>
+</html>

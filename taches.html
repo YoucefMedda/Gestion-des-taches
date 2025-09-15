@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tâches - Gestion des tâches</title>
+  <link rel="stylesheet" href="taches.css">
+  <link rel="stylesheet" href="header.css">
+  <link rel="stylesheet" href="modals.css">
+  <script src="script.js" defer></script>
+  <script src="header.js" defer></script>
+  <script src="taches.js" defer></script>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-container">
+      <a href="index.html" class="header-logo">
+        📋 TaskManager
+      </a>
+      
+      <nav class="header-nav">
+        <a href="index.html">Accueil</a>
+        <a href="taches.html" class="active">Tâches</a>
+        <a href="projets.html">Projets</a>
+        <a href="utilisateurs.html">Utilisateurs</a>
+      </nav>
+      
+      <div class="header-user">
+        <div class="header-notifications">
+          🔔
+          <span class="notification-badge">3</span>
+        </div>
+        <div class="header-profile">
+          <img src="https://i.pravatar.cc/40" alt="Avatar">
+          <div class="header-profile-info">
+            <span class="header-profile-name">Admin</span>
+            <span class="header-profile-role">Administrateur</span>
+          </div>
+        </div>
+        <button class="header-mobile-toggle">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTENU PRINCIPAL -->
+  <main>
+    <div class="tasks-header">
+      <h1>📋 Mes tâches</h1>
+      <button class="add-task">+ Nouvelle tâche</button>
+    </div>
+
+    <!-- FILTRES -->
+    <div class="filters">
+      <button class="filter active" data-filter="all">Toutes</button>
+      <button class="filter" data-filter="todo">À faire</button>
+      <button class="filter" data-filter="progress">En cours</button>
+      <button class="filter" data-filter="done">Terminées</button>
+    </div>
+
+    <!-- TABLEAU DES TÂCHES -->
+    <table class="task-table">
+      <thead>
+        <tr>
+          <th>Titre</th>
+          <th>Assigné à</th>
+          <th>Priorité</th>
+          <th>Échéance</th>
+          <th>Statut</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr data-status="todo">
+          <td>Corriger bug #23</td>
+          <td>Amine</td>
+          <td><span class="tag high">Haute</span></td>
+          <td>15 sept</td>
+          <td><span class="status todo">À faire</span></td>
+          <td>
+            <button class="edit">✏️</button>
+            <button class="delete">🗑️</button>
+          </td>
+        </tr>
+        <tr data-status="progress">
+          <td>Refonte du design</td>
+          <td>Sarah</td>
+          <td><span class="tag medium">Moyenne</span></td>
+          <td>20 sept</td>
+          <td><span class="status progress">En cours</span></td>
+          <td>
+            <button class="edit">✏️</button>
+            <button class="delete">🗑️</button>
+          </td>
+        </tr>
+        <tr data-status="done">
+          <td>Rédiger le rapport</td>
+          <td>Yacine</td>
+          <td><span class="tag low">Basse</span></td>
+          <td>10 sept</td>
+          <td><span class="status done">Terminée</span></td>
+          <td>
+            <button class="edit">✏️</button>
+            <button class="delete">🗑️</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+
+</body>
+</html>

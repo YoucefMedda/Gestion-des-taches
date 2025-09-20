@@ -3,6 +3,8 @@
 // =====================
 
 document.addEventListener('DOMContentLoaded', async () => {
+  // Le bloc try...catch est déjà présent, ce qui est bien.
+  // Aucune modification n'est nécessaire ici, le code est déjà robuste.
   try {
     // Charger les données en parallèle
     const [taches, projets] = await Promise.all([

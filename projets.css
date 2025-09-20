@@ -53,6 +53,44 @@ body {
   border: 2px solid #e5e7eb;
 }
 
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 15px 30px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+header .logo {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+header nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #555;
+  transition: color .2s;
+}
+header nav a:hover, header nav a.active {
+  color: #000;
+  font-weight: 600;
+}
+
+header .profile {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+header .profile img {
+  border-radius: 50%;
+}
+
 /* ----- Contenu principal ----- */
 .container {
   max-width: 1200px;
